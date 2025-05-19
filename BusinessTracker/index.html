@@ -47,7 +47,7 @@
         `&produit=${encodeURIComponent(produit)}` +
         `&quantite=${encodeURIComponent(quantite)}` +
         `&prixUnitaire=${encodeURIComponent(prixUnitaire)}`;
-
+    console.log(url);
       fetch(url)
         .then(response => response.text())
         .then(data => {
