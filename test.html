@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Transaction</title>
+</head>
+<body>
+  <button onclick="envoyer()">Tester la transaction</button>
+
+  <script>
+    function envoyer() {
+      fetch("https://script.google.com/macros/s/AKfycbz3H5fM5WJH243YTAxN0N6UflSC5BnGhZ4pmNWrHuezV3xBURhlEQ0RkYoay9QesO26/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          type: "achat",
+          produit: "Lunettes transparentes",
+          quantite: 4,
+          prixUnitaire: 2.4
+        })
+      })
+      .then(res => res.json())
+      .then(data => console.log("Réponse :", data))
+      .catch(err => console.error("Erreur :", err));
+    }
+  </script>
+</body>
+</html>
