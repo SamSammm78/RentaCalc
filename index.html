@@ -17,25 +17,38 @@
       </div>
 
       <div class="card p-4 shadow-sm">
-        <div class="mb-3">
-          <input type="number" id="productPrice" placeholder="Prix du produit" class="form-control">
-        </div>
-        <div class="mb-3">
-          <input type="number" id="productCount" placeholder="Nombre de produits" class="form-control">
-        </div>
-        <div class="mb-3">
-          <input type="number" id="shippingCost" placeholder="Livraison" class="form-control">
-        </div>
-        <div class="mb-3">
-          <input type="number" id="resalePrice" placeholder="Prix de revente du produit" class="form-control">
-        </div>
-        <div class="mb-4">
-          <input type="number" min="1" id="peopleCount" placeholder="Nombre de personnes" class="form-control">
-        </div>
-        <div class="d-grid">
-          <button id="calculate" class="btn btn-primary">Calculer</button>
-        </div>
-      </div>
+  <h3 class="mb-4">Calculateur de coûts</h3> <!-- Titre général -->
+
+  <div class="mb-3">
+    <label for="productPrice" class="form-label">Prix du produit</label>
+    <input type="number" id="productPrice" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="productCount" class="form-label">Nombre de produits</label>
+    <input type="number" id="productCount" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="shippingCost" class="form-label">Livraison</label>
+    <input type="number" id="shippingCost" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="resalePrice" class="form-label">Prix de revente du produit</label>
+    <input type="number" id="resalePrice" class="form-control">
+  </div>
+
+  <div class="mb-4">
+    <label for="peopleCount" class="form-label">Nombre de personnes</label>
+    <input type="number" min="1" id="peopleCount" class="form-control">
+  </div>
+
+  <div class="d-grid">
+    <button id="calculate" class="btn btn-primary">Calculer</button>
+  </div>
+</div>
+
 
       <div class="card mt-4 p-4">
         <h5 class="mb-3">Résultats</h5>
