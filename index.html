@@ -70,19 +70,19 @@ document.getElementById('calculate').addEventListener('click', function(){
     const pricePerProduct = (productPrice * productCount + shippingCost) / productCount;
     const totalPrice = (productPrice * productCount) + shippingCost;
 
-    document.getElementById('productPerPrice').innerText = 'Prix de chaque produit : ' + pricePerProduct + '€';
-    document.getElementById('totalPrice').innerText = 'Prix total : ' + totalPrice + '€';
+    document.getElementById('productPerPrice').innerText = 'Prix de chaque produit : ' + pricePerProduct.toFixed(2) + '€';
+    document.getElementById('totalPrice').innerText = 'Prix total : ' + totalPrice.toFixed(2) + '€';
 
     // Calculer le chiffre d'affaires et le bénéfice
     const revenue = productCount * parseFloat(document.getElementById('resalePrice').value);
     const profit = revenue - totalPrice;
-    document.getElementById('revenue').innerText = 'Chiffre d\'affaires : ' + revenue + '€';
-    document.getElementById('profit').innerText = 'Bénéfice : ' + profit + '€';
+    document.getElementById('revenue').innerText = 'Chiffre d\'affaires : ' + revenue.toFixed(2) + '€';
+    document.getElementById('profit').innerText = 'Bénéfice : ' + profit.toFixed(2) + '€';
 
     // Calculer les frais et bénéfice par personne
     const peopleCount = parseInt(document.getElementById('peopleCount').value);
-    document.getElementById('costPerPerson').innerText = 'Frais par personne : ' + (totalPrice / peopleCount) + '€';
-    document.getElementById('profitPerPerson').innerText = 'Bénéfice par personne : ' + (profit / peopleCount) + '€';
+    document.getElementById('costPerPerson').innerText = 'Frais par personne : ' + (totalPrice / peopleCount).toFixed(2) + '€';
+    document.getElementById('profitPerPerson').innerText = 'Bénéfice par personne : ' + (profit / peopleCount).toFixed(2) + '€';
 
     // Calculer l'indice de rentabilité
     const rentability = (profit / totalPrice) * 100;
