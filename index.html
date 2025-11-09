@@ -98,8 +98,8 @@ document.getElementById('calculate').addEventListener('click', function(){
     document.getElementById('profitPerPerson').innerText = 'Bénéfice par personne : ' + (profit / peopleCount).toFixed(2) + '€';
 
     // Calculer l'indice de rentabilité
-    const rentability = (profit / totalPrice) * 100;
-    document.getElementById('rentability').innerText = 'Indice de rentabilité : ' + rentability.toFixed(2) + '%';
+    const rentability = profit / totalPrice;
+    document.getElementById('rentability').innerText = 'Indice de rentabilité : x' + rentability.toFixed(2);
 });
 </script>
 </html>
